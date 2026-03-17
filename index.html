@@ -1,115 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>미샵 셀러 스튜디오 OS | misharp-selleros.com</title>
-  <meta name="description" content="20년차 여성의류 쇼핑몰 대표가 직접 만든 실무형 콘텐츠 생성툴. 1회 업로드로 상세페이지·썸네일·GIF·블로그·숏폼을 원스톱으로."/>
-  <meta property="og:title" content="미샵 셀러 스튜디오 OS"/>
-  <meta property="og:description" content="온라인 셀러를 위한 혁신적인 원스톱 상세페이지 콘텐츠 자동 생성"/>
-  <meta property="og:type" content="website"/>
-  <style>
-    :root{ --bg:#0b1220; --card:#0f172a; --line:rgba(255,255,255,.10); --text:rgba(255,255,255,.92); --muted:rgba(255,255,255,.72); --accent:#ff2d2d;}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans KR',sans-serif;background:linear-gradient(180deg,#07111f,#0b1220);color:var(--text)}
-    .wrap{max-width:1050px;margin:0 auto;padding:44px 18px 70px}
-    .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
-    .brand{font-weight:900;letter-spacing:-.6px}
-    .pill{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted);font-size:13px}
-    .hero{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:20px;padding:34px 26px}
-    h1{margin:0;font-size:44px;letter-spacing:-1px}
-    .sub{margin-top:10px;color:var(--muted);font-size:16px;line-height:1.6}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:14px;border:1px solid var(--line);text-decoration:none;color:var(--text);font-weight:800}
-    .btn.primary{background:var(--accent);border-color:transparent}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
-    .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;padding:18px}
-    .card h3{margin:0 0 8px 0;font-size:16px}
-    .card p{margin:0;color:var(--muted);line-height:1.7}
-    .faq{margin-top:18px}
-    details{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
-    summary{cursor:pointer;font-weight:800}
-    footer{margin-top:28px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    footer a{color:var(--muted);text-decoration:none}
-    footer a:hover{text-decoration:underline}
-    @media (max-width:760px){ .grid{grid-template-columns:1fr} h1{font-size:34px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MISHARP SELLER OS</title>
+
+<style>
+body{
+    margin:0;
+    background:#0b1220;
+    color:#fff;
+    font-family:Pretendard, sans-serif;
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:40px 20px;
+}
+
+.section{
+    margin-top:120px;
+}
+
+.hero{
+    text-align:center;
+    margin-top:60px;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:800;
+}
+
+.hero p{
+    color:#9ca3af;
+    margin-top:20px;
+    font-size:18px;
+}
+
+.btns{
+    margin-top:30px;
+}
+
+.btn{
+    padding:14px 22px;
+    border-radius:12px;
+    margin:5px;
+    display:inline-block;
+}
+
+.primary{
+    background:#ef4444;
+}
+
+.secondary{
+    background:#1f2937;
+}
+
+.big-text{
+    font-size:36px;
+    font-weight:700;
+    line-height:1.4;
+}
+
+.sub-text{
+    color:#9ca3af;
+    margin-top:20px;
+    font-size:18px;
+}
+
+.image-box{
+    margin-top:40px;
+    text-align:center;
+}
+
+.image-box img{
+    width:100%;
+    border-radius:20px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:#111827;
+    padding:30px;
+    border-radius:16px;
+}
+
+.faq-item{
+    margin-bottom:20px;
+}
+
+.faq-q{
+    font-weight:700;
+    font-size:18px;
+}
+
+.faq-a{
+    color:#9ca3af;
+    margin-top:10px;
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <div class="nav">
-      <div class="brand">MISHARP SELLER OS</div>
-      <div class="pill">misharp-selleros.com</div>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+    <h1>콘텐츠 만드는 시간,<br>이제 끝내세요</h1>
+    <p>
+        상세페이지, 썸네일, 블로그, SEO, 숏폼까지  
+        한 번의 입력으로 모두 완성됩니다
+    </p>
+
+    <div class="btns">
+        <div class="btn primary">무료 시작</div>
+        <div class="btn secondary">PRO 가입</div>
+    </div>
+</div>
+
+<!-- 문제 -->
+<div class="section">
+    <div class="big-text">
+        매출은 콘텐츠에서 나오는데<br>
+        콘텐츠 만들 시간이 없습니다
+    </div>
+    <div class="sub-text">
+        상세페이지 하나 만들고 나면 하루가 끝납니다  
+        블로그, 썸네일, 숏폼까지 하려면  
+        시간도, 체력도 부족합니다
+    </div>
+</div>
+
+<!-- 해결 -->
+<div class="section">
+    <div class="big-text">
+        그래서 셀러OS를 만들었습니다
+    </div>
+    <div class="sub-text">
+        실제 쇼핑몰을 20년 운영하며  
+        가장 필요했던 기능만 담았습니다
+    </div>
+</div>
+
+<!-- 이미지 -->
+<div class="section image-box">
+    <img src="dashboard.png">
+</div>
+
+<!-- 경험 -->
+<div class="section">
+    <div class="big-text">
+        상품 하나로 모든 콘텐츠를 만듭니다
     </div>
 
-    <section class="hero">
-      <h1>미샵 셀러 스튜디오 OS</h1>
-      <div class="sub">
-        MISHARP SELLER OS는 상품이미지, 간략정보, URL 등의 정보만으로 구매전환율이 높은<br/>
-        상세페이지와 마케팅을 위한 콘텐츠 생성을 서포트합니다.<br/><br/>
-        <b>20년차 여성의류 쇼핑몰 대표가 직접 만든 실무형 콘텐츠 생성툴</b>
-      </div>
-
-      <div class="cta">
-        <a class="btn primary" href="https://misharp-selleros-app.streamlit.app" target="_blank" rel="noopener">FREE | 무료체험 시작</a>
-        <a class="btn" href="#" onclick="alert('PRO 가입/결제는 다음 단계에서 연결합니다.');return false;">PRO 가입</a>
-        <a class="btn" href="mailto:misharpmail@naver.com">사용/협업 문의</a>
-      </div>
-    </section>
-
-    <section class="grid">
-      <div class="card">
-        <h3>1. 온라인 셀러에게 가장 필요한 것만 담았습니다.</h3>
-        <p>상세페이지·상품설명·썸네일·GIF·블로그·숏폼까지 “한 번의 입력”으로 이어지는 원스톱 워크플로우.</p>
-      </div>
-      <div class="card">
-        <h3>2. 시간 단축, 퀄리티 업그레이드, 매출 상승에 집중합니다.</h3>
-        <p>시간은 줄이고, 콘텐츠 퀄리티는 높이는데 중점을 둬 효율적인 업무성과를 내도록 돕습니다.</p>
-      </div>
-      <div class="card">
-        <h3>3. 유사 서비스와 다른 점</h3>
-        <p>실제 쇼핑몰 운영자의 실무 기준(반품/취소 감소, 구매전환 개선)을 중심으로 설계된 “현장형” 도구입니다.</p>
-      </div>
-      <div class="card">
-        <h3>4. 이런 분들과 함께 하고 싶습니다.</h3>
-        <p>1인 셀러/초보 셀러/외주 비용이 부담되는 팀/쇼핑몰 자동화로 성장하고 싶은 분.</p>
-      </div>
-    </section>
-
-    <section class="faq">
-      <h2 style="margin:22px 0 10px 0; font-size:20px;">FAQ</h2>
-
-      <details>
-        <summary>FREE 버전으로 무엇을 할 수 있나요?</summary>
-        <div style="margin-top:10px;color:var(--muted);line-height:1.7;">
-          FREE 단계에서는 대시보드, 상세페이지 JPG 변환 등 기본 기능을 무료로 사용해볼 수 있습니다. PRO 기능은 구독가입 후 오픈됩니다.
+    <div class="grid">
+        <div class="card">
+            상세페이지 자동 생성<br><br>
+            이미지와 정보만 넣으면  
+            구매전환형 상세페이지 완성
         </div>
-      </details>
-
-      <details>
-        <summary>PRO는 어떤 기능이 있나요?</summary>
-        <div style="margin-top:10px;color:var(--muted);line-height:1.7;">
-          상세페이지 PSD 출력, 상품설명, 썸네일, GIF, SEO 자동생성, 블로그 생성, 숏폼 기능 등을 원스톱으로 이용하고, 향후 AI 상품상담 서비스도 제공예정입니다.
+        <div class="card">
+            블로그 + SEO 자동 생성<br><br>
+            검색 유입까지 한 번에 해결
         </div>
-      </details>
-
-      <details>
-        <summary>문의는 어디로 하면 되나요?</summary>
-        <div style="margin-top:10px;color:var(--muted);line-height:1.7;">
-          이메일: <b>misharpmail@naver.com</b>
+        <div class="card">
+            썸네일 / GIF 생성<br><br>
+            광고용 콘텐츠까지 자동 제작
         </div>
-      </details>
-    </section>
+        <div class="card">
+            숏폼 콘텐츠 확장<br><br>
+            인스타, 릴스까지 연결
+        </div>
+    </div>
+</div>
 
-    <footer>
-      <div>COPY RIGHT © 2026 미샵컴퍼니 misharpcompany BY MIYAWA</div>
-      <div>
-        <a href="#" onclick="return false;">서비스 소개</a> ·
-        <a href="#" onclick="return false;">개인정보처리방침</a> ·
-        <a href="#" onclick="return false;">이용약관</a> ·
-        <a href="mailto:misharpmail@naver.com">문의</a>
-      </div>
-    </footer>
-  </div>
+<!-- 결과 -->
+<div class="section">
+    <div class="big-text">
+        작업시간은 줄이고<br>
+        매출은 늘립니다
+    </div>
+    <div class="sub-text">
+        3시간 걸리던 작업이 10분으로  
+        콘텐츠 생산량은 몇 배로 증가합니다
+    </div>
+</div>
+
+<!-- 신뢰 -->
+<div class="section">
+    <div class="big-text">
+        이건 이론이 아닙니다
+    </div>
+    <div class="sub-text">
+        실제 여성의류 쇼핑몰을  
+        20년 운영하며 만든 실전 도구입니다
+    </div>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+    <div class="big-text">자주 묻는 질문</div>
+
+    <div class="faq-item">
+        <div class="faq-q">무료로 정말 사용할 수 있나요?</div>
+        <div class="faq-a">
+            네, 상세페이지 생성 기능은 무료로 제공됩니다.  
+            실제 사용해보신 후 필요에 따라 PRO로 확장하시면 됩니다.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">PRO는 어떤 차이가 있나요?</div>
+        <div class="faq-a">
+            썸네일, GIF, SEO, 블로그, 숏폼까지  
+            콘텐츠 확장 기능이 포함됩니다.  
+            단순 제작이 아니라 매출을 만드는 구조입니다.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">기존 툴이랑 뭐가 다른가요?</div>
+        <div class="faq-a">
+            일반 AI툴은 결과를 만들어줍니다.  
+            셀러OS는 ‘판매되는 콘텐츠’를 만듭니다.  
+            실제 쇼핑몰 운영 기준으로 설계된 점이 가장 큰 차이입니다.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">초보자도 사용할 수 있나요?</div>
+        <div class="faq-a">
+            네, 오히려 초보자일수록 더 빠르게 결과를 만들 수 있습니다.  
+            복잡한 설정 없이 입력만 하면 결과가 나옵니다.
+        </div>
+    </div>
+
+</div>
+
+</div>
 </body>
 </html>
