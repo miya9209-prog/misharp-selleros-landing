@@ -1,251 +1,219 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MISHARP SELLER OS</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>미샵 셀러 스튜디오 OS | misharp-selleros.com</title>
+  <meta name="description" content="20년차 여성의류 쇼핑몰 대표가 직접 만든 실무형 콘텐츠 자동화 서비스. 상세페이지, 상품설명, 썸네일, GIF, SEO, 블로그, 숏폼까지 한 번의 입력으로 연결합니다."/>
+  <meta property="og:title" content="미샵 셀러 스튜디오 OS"/>
+  <meta property="og:description" content="콘텐츠 제작 시간을 줄이고 구매전환형 결과물을 더 빠르게 만드는 실무형 셀러 운영 OS"/>
+  <meta property="og:type" content="website"/>
+  <style>
+    :root{
+      --bg:#07111f; --bg2:#0b1220; --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.11);
+      --text:rgba(255,255,255,.95); --muted:rgba(255,255,255,.72); --muted2:rgba(255,255,255,.56); --accent:#ff3b30;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans KR',sans-serif;background:radial-gradient(circle at top,#10203a 0%,#07111f 28%,#0b1220 100%);color:var(--text)}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:38px 20px 84px}
+    .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:34px}
+    .brand{font-weight:900;font-size:18px;letter-spacing:-.4px}
+    .pill{display:inline-flex;align-items:center;padding:10px 14px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;background:rgba(255,255,255,.02)}
 
-<style>
-body{
-    margin:0;
-    background:#0b1220;
-    color:#fff;
-    font-family:Pretendard, sans-serif;
-}
+    .page-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:38px}
+    .page-kicker{font-size:13px;color:var(--muted2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+    .page-title{margin:0;font-size:34px;letter-spacing:-1.1px;line-height:1.1;font-weight:900}
+    .page-desc{margin-top:10px;color:var(--muted);font-size:15px;line-height:1.7;max-width:760px}
 
-.container{
-    max-width:1100px;
-    margin:0 auto;
-    padding:40px 20px;
-}
+    .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:28px;align-items:center;padding:18px 0 8px}
+    .eyebrow{display:inline-flex;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px;background:rgba(255,255,255,.03);margin-bottom:16px}
+    .hero h2{margin:0;font-size:60px;line-height:1.02;letter-spacing:-2px}
+    .hero p{margin:18px 0 0;color:var(--muted);font-size:18px;line-height:1.75;max-width:700px}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 20px;border-radius:14px;border:1px solid var(--line);text-decoration:none;font-weight:800;background:rgba(255,255,255,.03)}
+    .btn.primary{background:var(--accent);border-color:transparent;color:#fff}
+    .btn:hover{transform:translateY(-1px)}
+    .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.22)}
+    .hero-card img{width:100%;display:block;border-radius:18px;border:1px solid rgba(255,255,255,.08)}
+    .hero-caption{display:flex;justify-content:space-between;gap:12px;margin-top:12px;color:var(--muted2);font-size:12px}
 
-.section{
-    margin-top:120px;
-}
+    .section{margin-top:118px}
+    .section .kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2);margin-bottom:12px}
+    .section h3{margin:0;font-size:44px;line-height:1.15;letter-spacing:-1.3px;max-width:880px}
+    .section .lead{margin-top:16px;color:var(--muted);font-size:18px;line-height:1.8;max-width:920px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:34px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:34px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px}
+    .card .num{font-size:12px;color:var(--muted2);margin-bottom:12px}
+    .card h4{margin:0 0 10px;font-size:22px;line-height:1.35;letter-spacing:-.4px}
+    .card p{margin:0;color:var(--muted);line-height:1.8;font-size:15px}
 
-.hero{
-    text-align:center;
-    margin-top:60px;
-}
+    .feature-band{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:34px}
+    .feature-list{display:grid;gap:16px}
+    .feature-item{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+    .feature-item h4{margin:0 0 10px;font-size:22px}
+    .feature-item p{margin:0;color:var(--muted);line-height:1.8}
+    .metric{display:grid;gap:16px}
+    .metric .card strong{display:block;font-size:34px;letter-spacing:-1px;margin-bottom:8px}
 
-.hero h1{
-    font-size:48px;
-    font-weight:800;
-}
+    .faq{margin-top:42px}
+    .faq-title{margin:0 0 26px;font-size:34px;letter-spacing:-.8px}
+    details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;margin:14px 0}
+    summary{cursor:pointer;list-style:none;font-weight:800;font-size:18px;line-height:1.5}
+    summary::-webkit-details-marker{display:none}
+    details .answer{margin-top:14px;color:var(--muted);line-height:1.9;font-size:15px}
 
-.hero p{
-    color:#9ca3af;
-    margin-top:20px;
-    font-size:18px;
-}
+    footer{margin-top:110px;padding-top:28px;border-top:1px solid var(--line)}
+    .foot-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+    .foot-brand{font-weight:900;font-size:18px;letter-spacing:-.4px;margin-bottom:10px}
+    .foot-desc,.foot-meta{color:var(--muted);font-size:14px;line-height:1.9}
+    .foot-links{display:flex;flex-wrap:wrap;gap:14px;margin:14px 0 10px}
+    .foot-links a{color:var(--text);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.18)}
+    .copy{margin-top:8px;color:var(--muted2);font-size:13px}
 
-.btns{
-    margin-top:30px;
-}
-
-.btn{
-    padding:14px 22px;
-    border-radius:12px;
-    margin:5px;
-    display:inline-block;
-}
-
-.primary{
-    background:#ef4444;
-}
-
-.secondary{
-    background:#1f2937;
-}
-
-.big-text{
-    font-size:36px;
-    font-weight:700;
-    line-height:1.4;
-}
-
-.sub-text{
-    color:#9ca3af;
-    margin-top:20px;
-    font-size:18px;
-}
-
-.image-box{
-    margin-top:40px;
-    text-align:center;
-}
-
-.image-box img{
-    width:100%;
-    border-radius:20px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-    margin-top:40px;
-}
-
-.card{
-    background:#111827;
-    padding:30px;
-    border-radius:16px;
-}
-
-.faq-item{
-    margin-bottom:20px;
-}
-
-.faq-q{
-    font-weight:700;
-    font-size:18px;
-}
-
-.faq-a{
-    color:#9ca3af;
-    margin-top:10px;
-}
-</style>
+    @media (max-width:980px){
+      .hero,.feature-band,.foot-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .hero h2{font-size:48px}
+    }
+    @media (max-width:760px){
+      .wrap{padding:28px 16px 70px}
+      .page-title{font-size:28px}
+      .hero h2{font-size:38px;letter-spacing:-1.4px}
+      .section{margin-top:86px}
+      .section h3,.faq-title{font-size:30px}
+      .grid-2{grid-template-columns:1fr}
+      .page-head{display:block}
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-
-<!-- HERO -->
-<div class="hero">
-    <h1>콘텐츠 만드는 시간,<br>이제 끝내세요</h1>
-    <p>
-        상세페이지, 썸네일, 블로그, SEO, 숏폼까지  
-        한 번의 입력으로 모두 완성됩니다
-    </p>
-
-    <div class="btns">
-        <div class="btn primary">무료 시작</div>
-        <div class="btn secondary">PRO 가입</div>
-    </div>
-</div>
-
-<!-- 문제 -->
-<div class="section">
-    <div class="big-text">
-        매출은 콘텐츠에서 나오는데<br>
-        콘텐츠 만들 시간이 없습니다
-    </div>
-    <div class="sub-text">
-        상세페이지 하나 만들고 나면 하루가 끝납니다  
-        블로그, 썸네일, 숏폼까지 하려면  
-        시간도, 체력도 부족합니다
-    </div>
-</div>
-
-<!-- 해결 -->
-<div class="section">
-    <div class="big-text">
-        그래서 셀러OS를 만들었습니다
-    </div>
-    <div class="sub-text">
-        실제 쇼핑몰을 20년 운영하며  
-        가장 필요했던 기능만 담았습니다
-    </div>
-</div>
-
-<!-- 이미지 -->
-<div class="section image-box">
-    <img src="dashboard.png">
-</div>
-
-<!-- 경험 -->
-<div class="section">
-    <div class="big-text">
-        상품 하나로 모든 콘텐츠를 만듭니다
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">MISHARP SELLER OS</div>
+      <div class="pill">misharp-selleros.com</div>
     </div>
 
-    <div class="grid">
-        <div class="card">
-            상세페이지 자동 생성<br><br>
-            이미지와 정보만 넣으면  
-            구매전환형 상세페이지 완성
+    <header class="page-head">
+      <div>
+        <div class="page-kicker">Seller productivity platform</div>
+        <h1 class="page-title">미샵 셀러 스튜디오 OS</h1>
+        <div class="page-desc">상세페이지 제작부터 상품설명, 썸네일, GIF, SEO, 블로그, 숏폼까지. 온라인 셀러가 매일 반복하던 콘텐츠 작업을 더 빠르고, 더 일관되고, 더 판매 친화적으로 만들기 위해 설계한 실무형 운영 OS입니다.</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">20년차 여성의류 쇼핑몰 대표가 직접 설계한 실전형 시스템</div>
+        <h2>상품 하나에서<br/>판매 콘텐츠 전체가<br/>연결됩니다.</h2>
+        <p>셀러OS는 단순히 문장을 생성하는 도구가 아닙니다. 실제 쇼핑몰 운영자가 가장 자주 부딪히는 문제, 즉 제작 시간 과다, 외주 비용 부담, 콘텐츠 품질 편차, 반복 작업 피로, 구매전환을 고려하지 않은 결과물의 한계를 줄이기 위해 만들어졌습니다. 입력은 줄이고 결과는 넓히는 흐름, 바로 그 운영 방식 자체를 서비스로 옮겨놓았습니다.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://misharp-selleros-app.streamlit.app">FREE | 무료체험 시작</a>
+          <a class="btn" href="mailto:misharpmail@naver.com?subject=MISHARP%20SELLER%20OS%20PRO%20문의">PRO 가입 문의</a>
+          <a class="btn" href="mailto:misharpmail@naver.com?subject=MISHARP%20SELLER%20OS%20협업%20문의">사용/협업 문의</a>
         </div>
-        <div class="card">
-            블로그 + SEO 자동 생성<br><br>
-            검색 유입까지 한 번에 해결
+      </div>
+      <div class="hero-card">
+        <img src="dashboard-main.jpg" alt="미샵 셀러OS 메인 대시보드"/>
+        <div class="hero-caption"><span>실제 셀러OS 메인 대시보드 화면</span><span>Dashboard preview</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">Why seller os</div>
+      <h3>콘텐츠는 매출을 움직이는데, 대부분의 셀러는 콘텐츠를 만들다가 하루를 다 써버립니다.</h3>
+      <div class="lead">상품은 계속 등록해야 하고, 상세페이지는 더 좋아져야 하고, 광고용 썸네일과 숏폼, 검색 유입을 위한 SEO와 블로그까지 챙겨야 합니다. 그런데 현실은 늘 시간과 인력이 부족합니다. 셀러OS는 이 반복 업무를 쪼개서 각각 해결하는 대신, 한 번의 입력이 다음 작업으로 자연스럽게 이어지는 운영 흐름으로 재설계했습니다.</div>
+      <div class="grid-2">
+        <div class="card"><div class="num">01</div><h4>제작 시간이 너무 오래 걸립니다.</h4><p>상품 하나 등록하려고 이미지 정리, 설명 문구 작성, SEO 키워드 고민, 블로그 글 초안, 숏폼 문구까지 각각 따로 만들다 보면 실제 판매보다 제작 업무가 더 무거워집니다.</p></div>
+        <div class="card"><div class="num">02</div><h4>결과물의 일관성이 흔들립니다.</h4><p>담당자나 날마다 컨디션에 따라 카피 톤이 달라지고, 썸네일과 상세페이지 메시지가 어긋나고, 브랜드 인상이 들쭉날쭉해지는 순간 전환 효율도 함께 흔들릴 수 있습니다.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">What it does</div>
+      <h3>셀러OS는 ‘도구 모음’이 아니라, 셀러의 하루 작업 순서를 그대로 담은 운영 시스템입니다.</h3>
+      <div class="lead">대시보드에서 오늘 해야 할 일과 바로가기를 관리하고, 상세페이지 생성에서 시작한 입력값이 상품설명, 썸네일, GIF, SEO, 블로그, 숏폼으로 이어지도록 설계했습니다. 각 기능이 따로 노는 것이 아니라, 실제 운영 흐름 안에서 연결되도록 만든 점이 핵심입니다.</div>
+      <div class="feature-band">
+        <div class="feature-list">
+          <div class="feature-item"><h4>상세페이지 생성</h4><p>상품 이미지와 기본 정보만으로 더 빠르게 전환형 상세페이지 초안을 구성합니다. 반복 작업은 줄이고, 일관된 구조를 유지하는 데 집중합니다.</p></div>
+          <div class="feature-item"><h4>상품설명 · SEO · 블로그</h4><p>판매 문구와 검색 노출용 문구를 분리하지 않고 한 흐름으로 연결합니다. 판매 포인트를 놓치지 않으면서도 검색 유입 관점의 문장 설계까지 고려합니다.</p></div>
+          <div class="feature-item"><h4>썸네일 · GIF · 숏폼 메이커</h4><p>광고와 SNS에 필요한 시각 결과물도 별도 외주 없이 빠르게 확장할 수 있도록 돕습니다. 상품 하나에서 다양한 채널용 콘텐츠를 이어서 만들 수 있습니다.</p></div>
         </div>
-        <div class="card">
-            썸네일 / GIF 생성<br><br>
-            광고용 콘텐츠까지 자동 제작
+        <div class="metric">
+          <div class="card"><strong>1회 입력</strong><p>한 번 입력한 정보를 여러 기능으로 확장하는 원스톱 워크플로우</p></div>
+          <div class="card"><strong>운영 중심</strong><p>실제 쇼핑몰 운영자의 기준으로 반품·이탈·전환을 함께 고려한 결과물 지향</p></div>
+          <div class="card"><strong>브랜드 일관성</strong><p>여러 채널로 퍼져도 같은 브랜드 톤을 유지하도록 돕는 구조</p></div>
         </div>
-        <div class="card">
-            숏폼 콘텐츠 확장<br><br>
-            인스타, 릴스까지 연결
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">Designed for growth</div>
+      <h3>시간을 줄이는 것에서 끝나지 않습니다. 더 빠르게 만들면서도 더 판매다운 결과를 만들기 위한 구조입니다.</h3>
+      <div class="grid-3">
+        <div class="card"><div class="num">A</div><h4>운영 속도 향상</h4><p>반복 제작에 쓰이던 시간을 줄여 상품 소싱, 고객 응대, 광고 운영처럼 더 중요한 일에 집중할 수 있게 합니다.</p></div>
+        <div class="card"><div class="num">B</div><h4>브랜드 품질 유지</h4><p>카피와 디자인 결과물의 톤을 맞추기 쉬워져, 고객이 어느 접점에서 보더라도 같은 브랜드 인상을 느낄 수 있습니다.</p></div>
+        <div class="card"><div class="num">C</div><h4>콘텐츠 확장성 확보</h4><p>상품 한 개를 중심으로 상세페이지, 검색용 글, SNS용 문구까지 이어지기 때문에 채널 확장이 훨씬 가벼워집니다.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">FAQ</div>
+      <h3>도입 전에 가장 많이 묻는 질문들</h3>
+      <div class="lead">셀러OS가 어떤 사람에게 맞는지, 무료와 PRO의 차이가 무엇인지, 기존 생성형 도구와 무엇이 다른지 가장 궁금해하시는 부분을 먼저 정리했습니다.</div>
+      <div class="faq">
+        <h4 class="faq-title">자주 묻는 질문</h4>
+        <details>
+          <summary>FREE 버전으로 어디까지 사용할 수 있나요?</summary>
+          <div class="answer">FREE 버전은 셀러OS의 기본 흐름을 체험하고, 핵심 기능의 일부를 먼저 경험해보는 단계로 설계되어 있습니다. 특히 상세페이지 생성과 대시보드 중심의 기본 사용 흐름을 확인해보실 수 있습니다. 먼저 직접 사용해보시고, 본인 업무 방식에 맞는지 판단한 뒤 확장하는 구조가 자연스럽습니다.</div>
+        </details>
+        <details>
+          <summary>PRO는 어떤 사용자에게 더 적합한가요?</summary>
+          <div class="answer">상품 등록 빈도가 높거나, 블로그·SEO·SNS까지 함께 운영해야 하는 셀러에게 특히 적합합니다. 썸네일, GIF, 상품설명, SEO 생성, 블로그, 숏폼 등 콘텐츠 확장 기능을 함께 쓰면 작업 속도와 일관성이 크게 좋아집니다. 혼자 운영하는 1인 셀러나 소규모 팀일수록 체감 효율이 큽니다.</div>
+        </details>
+        <details>
+          <summary>기존 AI 글쓰기 도구나 이미지 도구와 가장 다른 점은 무엇인가요?</summary>
+          <div class="answer">셀러OS는 ‘문장 하나’ 또는 ‘이미지 하나’를 따로 만드는 툴이 아니라, 실제 쇼핑몰 운영에 필요한 순서를 기준으로 결과물을 이어주는 운영형 시스템입니다. 반품과 이탈을 줄이고, 구매전환에 더 유리한 콘텐츠 흐름을 고민한 설계라는 점에서 일반 생성형 툴과 결이 다릅니다.</div>
+        </details>
+        <details>
+          <summary>패션 외 카테고리 셀러도 사용할 수 있나요?</summary>
+          <div class="answer">현재는 패션 커머스 실무를 바탕으로 가장 촘촘하게 설계되어 있지만, 기본적인 콘텐츠 자동화 흐름 자체는 다양한 온라인 셀러에게도 충분히 도움이 됩니다. 특히 이미지와 상품 포인트를 중심으로 다채널 콘텐츠를 만들어야 하는 업종이라면 활용 가능성이 높습니다.</div>
+        </details>
+        <details>
+          <summary>초보 셀러도 바로 사용할 수 있나요?</summary>
+          <div class="answer">네. 셀러OS는 복잡한 세팅보다 실제 입력과 결과에 집중하도록 설계되어 있습니다. 처음부터 고급 기능을 모두 이해해야 하는 구조가 아니라, 하나의 기능에서 시작해 필요한 만큼 넓혀가는 방식이라 초보자도 부담 없이 접근할 수 있습니다.</div>
+        </details>
+        <details>
+          <summary>문의나 협업은 어디로 하면 되나요?</summary>
+          <div class="answer">사용 문의, 협업 제안, PRO 도입 상담은 아래 메일로 연락주시면 됩니다. <br/>이메일: <strong>misharpmail@naver.com</strong></div>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">MISHARP SELLER OS</div>
+          <div class="foot-desc">미샵 셀러 스튜디오 OS는 온라인 셀러의 반복 제작 업무를 줄이고, 더 일관되고 더 판매 친화적인 콘텐츠 운영을 돕기 위해 만든 실무형 셀러 운영 플랫폼입니다.</div>
+          <div class="foot-links">
+            <a href="index.html">서비스 소개</a>
+            <a href="privacy.html">개인정보처리방침</a>
+            <a href="terms.html">이용약관</a>
+            <a href="mailto:misharpmail@naver.com">문의하기</a>
+          </div>
+          <div class="copy">© 2026 MISHARP Company. All rights reserved.</div>
         </div>
-    </div>
-</div>
-
-<!-- 결과 -->
-<div class="section">
-    <div class="big-text">
-        작업시간은 줄이고<br>
-        매출은 늘립니다
-    </div>
-    <div class="sub-text">
-        3시간 걸리던 작업이 10분으로  
-        콘텐츠 생산량은 몇 배로 증가합니다
-    </div>
-</div>
-
-<!-- 신뢰 -->
-<div class="section">
-    <div class="big-text">
-        이건 이론이 아닙니다
-    </div>
-    <div class="sub-text">
-        실제 여성의류 쇼핑몰을  
-        20년 운영하며 만든 실전 도구입니다
-    </div>
-</div>
-
-<!-- FAQ -->
-<div class="section">
-    <div class="big-text">자주 묻는 질문</div>
-
-    <div class="faq-item">
-        <div class="faq-q">무료로 정말 사용할 수 있나요?</div>
-        <div class="faq-a">
-            네, 상세페이지 생성 기능은 무료로 제공됩니다.  
-            실제 사용해보신 후 필요에 따라 PRO로 확장하시면 됩니다.
+        <div class="foot-meta">
+          운영: 미샵컴퍼니(MISHARP Company)<br/>
+          대표 서비스: MISHARP SELLER OS<br/>
+          문의 이메일: misharpmail@naver.com<br/>
+          본 페이지의 모든 텍스트, 디자인, 구성 요소는 저작권 보호를 받습니다.
         </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-q">PRO는 어떤 차이가 있나요?</div>
-        <div class="faq-a">
-            썸네일, GIF, SEO, 블로그, 숏폼까지  
-            콘텐츠 확장 기능이 포함됩니다.  
-            단순 제작이 아니라 매출을 만드는 구조입니다.
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-q">기존 툴이랑 뭐가 다른가요?</div>
-        <div class="faq-a">
-            일반 AI툴은 결과를 만들어줍니다.  
-            셀러OS는 ‘판매되는 콘텐츠’를 만듭니다.  
-            실제 쇼핑몰 운영 기준으로 설계된 점이 가장 큰 차이입니다.
-        </div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-q">초보자도 사용할 수 있나요?</div>
-        <div class="faq-a">
-            네, 오히려 초보자일수록 더 빠르게 결과를 만들 수 있습니다.  
-            복잡한 설정 없이 입력만 하면 결과가 나옵니다.
-        </div>
-    </div>
-
-</div>
-
-</div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
