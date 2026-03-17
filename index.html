@@ -1,168 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MISHARP SELLER OS</title>
-
-<style>
-body {
-    margin:0;
-    background:#0b1220;
-    color:#fff;
-    font-family: Pretendard, sans-serif;
-}
-
-.container {
-    max-width:1100px;
-    margin:0 auto;
-    padding:40px 20px;
-}
-
-.hero {
-    background:linear-gradient(180deg,#111827,#0b1220);
-    border-radius:20px;
-    padding:40px;
-}
-
-.title {
-    font-size:36px;
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.subtitle {
-    color:#9ca3af;
-    margin-bottom:25px;
-}
-
-.btns {
-    display:flex;
-    gap:10px;
-}
-
-.btn {
-    padding:12px 18px;
-    border-radius:10px;
-    cursor:pointer;
-}
-
-.primary {
-    background:#ef4444;
-}
-
-.secondary {
-    background:#1f2937;
-}
-
-.section {
-    margin-top:60px;
-}
-
-.card-grid {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.card {
-    background:#111827;
-    padding:20px;
-    border-radius:14px;
-}
-
-.faq-item {
-    background:#111827;
-    padding:18px;
-    border-radius:12px;
-    margin-bottom:12px;
-}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>미샵 셀러 스튜디오 OS | misharp-selleros.com</title>
+  <meta name="description" content="20년차 여성의류 쇼핑몰 대표가 직접 만든 실무형 콘텐츠 생성툴. 1회 업로드로 상세페이지·썸네일·GIF·블로그·숏폼을 원스톱으로."/>
+  <meta property="og:title" content="미샵 셀러 스튜디오 OS"/>
+  <meta property="og:description" content="온라인 셀러를 위한 혁신적인 원스톱 상세페이지 콘텐츠 자동 생성"/>
+  <meta property="og:type" content="website"/>
+  <style>
+    :root{ --bg:#0b1220; --card:#0f172a; --line:rgba(255,255,255,.10); --text:rgba(255,255,255,.92); --muted:rgba(255,255,255,.72); --accent:#ff2d2d;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans KR',sans-serif;background:linear-gradient(180deg,#07111f,#0b1220);color:var(--text)}
+    .wrap{max-width:1050px;margin:0 auto;padding:44px 18px 70px}
+    .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
+    .brand{font-weight:900;letter-spacing:-.6px}
+    .pill{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);padding:10px 14px;border-radius:999px;color:var(--muted);font-size:13px}
+    .hero{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:20px;padding:34px 26px}
+    h1{margin:0;font-size:44px;letter-spacing:-1px}
+    .sub{margin-top:10px;color:var(--muted);font-size:16px;line-height:1.6}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:14px;border:1px solid var(--line);text-decoration:none;color:var(--text);font-weight:800}
+    .btn.primary{background:var(--accent);border-color:transparent}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+    .card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:18px;padding:18px}
+    .card h3{margin:0 0 8px 0;font-size:16px}
+    .card p{margin:0;color:var(--muted);line-height:1.7}
+    .faq{margin-top:18px}
+    details{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+    summary{cursor:pointer;font-weight:800}
+    footer{margin-top:28px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    footer a{color:var(--muted);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    @media (max-width:760px){ .grid{grid-template-columns:1fr} h1{font-size:34px}}
+  </style>
 </head>
-
 <body>
-
-<div class="container">
-
-<div class="hero">
-    <div class="title">미샵 셀러 스튜디오 OS</div>
-    <div class="subtitle">
-        상세페이지, 썸네일, SEO, 블로그까지  
-        한 번의 입력으로 콘텐츠를 완성합니다.
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">MISHARP SELLER OS</div>
+      <div class="pill">misharp-selleros.com</div>
     </div>
 
-    <div class="btns">
-        <div class="btn primary">무료 시작</div>
-        <div class="btn secondary">PRO 가입</div>
-    </div>
-</div>
+    <section class="hero">
+      <h1>미샵 셀러 스튜디오 OS</h1>
+      <div class="sub">
+        MISHARP SELLER OS는 상품이미지, 간략정보, URL 등의 정보만으로 구매전환율이 높은<br/>
+        상세페이지와 마케팅을 위한 콘텐츠 생성을 서포트합니다.<br/><br/>
+        <b>20년차 여성의류 쇼핑몰 대표가 직접 만든 실무형 콘텐츠 생성툴</b>
+      </div>
 
-<!-- 핵심 메시지 -->
-<div class="section">
-    <h2>왜 이걸 써야 할까요?</h2>
-    <div class="card-grid">
-        <div class="card">
-            하루에 상세페이지 하나 만들기도 벅겁습니다  
-            → 하지만 매출은 콘텐츠 개수에 비례합니다
+      <div class="cta">
+        <a class="btn primary" href="https://misharp-selleros-app.streamlit.app" target="_blank" rel="noopener">FREE | 무료체험 시작</a>
+        <a class="btn" href="#" onclick="alert('PRO 가입/결제는 다음 단계에서 연결합니다.');return false;">PRO 가입</a>
+        <a class="btn" href="mailto:misharpmail@naver.com">사용/협업 문의</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>1. 온라인 셀러에게 가장 필요한 것만 담았습니다.</h3>
+        <p>상세페이지·상품설명·썸네일·GIF·블로그·숏폼까지 “한 번의 입력”으로 이어지는 원스톱 워크플로우.</p>
+      </div>
+      <div class="card">
+        <h3>2. 시간 단축, 퀄리티 업그레이드, 매출 상승에 집중합니다.</h3>
+        <p>시간은 줄이고, 콘텐츠 퀄리티는 높이는데 중점을 둬 효율적인 업무성과를 내도록 돕습니다.</p>
+      </div>
+      <div class="card">
+        <h3>3. 유사 서비스와 다른 점</h3>
+        <p>실제 쇼핑몰 운영자의 실무 기준(반품/취소 감소, 구매전환 개선)을 중심으로 설계된 “현장형” 도구입니다.</p>
+      </div>
+      <div class="card">
+        <h3>4. 이런 분들과 함께 하고 싶습니다.</h3>
+        <p>1인 셀러/초보 셀러/외주 비용이 부담되는 팀/쇼핑몰 자동화로 성장하고 싶은 분.</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2 style="margin:22px 0 10px 0; font-size:20px;">FAQ</h2>
+
+      <details>
+        <summary>FREE 버전으로 무엇을 할 수 있나요?</summary>
+        <div style="margin-top:10px;color:var(--muted);line-height:1.7;">
+          FREE 단계에서는 대시보드, 상세페이지 JPG 변환 등 기본 기능을 무료로 사용해볼 수 있습니다. PRO 기능은 구독가입 후 오픈됩니다.
         </div>
-        <div class="card">
-            외주 맡기면 돈은 들고  
-            직접 하면 시간이 없습니다
+      </details>
+
+      <details>
+        <summary>PRO는 어떤 기능이 있나요?</summary>
+        <div style="margin-top:10px;color:var(--muted);line-height:1.7;">
+          상세페이지 PSD 출력, 상품설명, 썸네일, GIF, SEO 자동생성, 블로그 생성, 숏폼 기능 등을 원스톱으로 이용하고, 향후 AI 상품상담 서비스도 제공예정입니다.
         </div>
-    </div>
-</div>
+      </details>
 
-<!-- 해결 -->
-<div class="section">
-    <h2>셀러OS가 해결합니다</h2>
-    <div class="card-grid">
-        <div class="card">이미지 + URL 입력 → 상세페이지 자동 생성</div>
-        <div class="card">상품 하나 → 블로그 + SEO + 숏폼까지 확장</div>
-    </div>
-</div>
+      <details>
+        <summary>문의는 어디로 하면 되나요?</summary>
+        <div style="margin-top:10px;color:var(--muted);line-height:1.7;">
+          이메일: <b>misharpmail@naver.com</b>
+        </div>
+      </details>
+    </section>
 
-<!-- 결과 -->
-<div class="section">
-    <h2>결과는 이렇게 달라집니다</h2>
-    <div class="card-grid">
-        <div class="card">작업시간 3시간 → 10분</div>
-        <div class="card">콘텐츠 생산량 5배 증가</div>
-    </div>
-</div>
-
-<!-- 이미지 -->
-<div class="section">
-    <h2>실제 화면</h2>
-    <img src="dashboard.png" style="width:100%; border-radius:14px;">
-</div>
-
-<!-- FAQ -->
-<div class="section">
-    <h2>자주 묻는 질문</h2>
-
-    <div class="faq-item">
-        Q. 무료로 어디까지 가능한가요?<br>
-        A. 상세페이지 생성은 무료로 사용 가능합니다.
-    </div>
-
-    <div class="faq-item">
-        Q. PRO는 왜 필요한가요?<br>
-        A. 썸네일, GIF, SEO, 블로그, 숏폼 생성은 PRO 기능입니다.
-    </div>
-
-    <div class="faq-item">
-        Q. 다른 서비스랑 뭐가 다른가요?<br>
-        A. 실제 쇼핑몰 운영자가 만든 실무형 도구입니다.
-    </div>
-
-    <div class="faq-item">
-        Q. 어떤 분들에게 적합한가요?<br>
-        A. 1인 셀러, 쇼핑몰 운영자, 콘텐츠 제작 시간이 부족한 분들입니다.
-    </div>
-
-</div>
-
-</div>
-
+    <footer>
+      <div>COPY RIGHT © 2026 미샵컴퍼니 misharpcompany BY MIYAWA</div>
+      <div>
+        <a href="#" onclick="return false;">서비스 소개</a> ·
+        <a href="#" onclick="return false;">개인정보처리방침</a> ·
+        <a href="#" onclick="return false;">이용약관</a> ·
+        <a href="mailto:misharpmail@naver.com">문의</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
