@@ -44,11 +44,12 @@
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
     .page{width:min(100%, var(--max));margin:0 auto;background:transparent}
+    .site-header{position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 10px 28px rgba(2,10,26,.22)}
     .image-block{position:relative;width:100%}
     .image-block picture,.image-block img{width:100%;display:block}
     .overlay-link{position:absolute;display:block;z-index:3;text-indent:-9999px;overflow:hidden;white-space:nowrap;border-radius:999px}
     .overlay-link:focus-visible{outline:3px solid #fff;outline-offset:2px}
-    .header-link{left:81.2%;top:24.3%;width:12.6%;height:53.8%;border-radius:2px}
+    .header-link{left:78.8%;top:17.6%;width:17.0%;height:50.2%;border-radius:2px}
     .cta-link{left:12.1%;top:7.7%;width:76.8%;height:85.5%;border-radius:0}
 
     .faq-section{background:linear-gradient(180deg, #031126 0%, #021023 100%);color:var(--text)}
@@ -99,9 +100,9 @@
 </head>
 <body>
   <div class="page">
-    <section class="image-block" aria-label="헤더">
+    <section class="image-block site-header" aria-label="헤더">
       <img src="assets/header.jpg" alt="미샵 셀러 스튜디오 OS 헤더" width="1000" height="78" />
-      <a class="overlay-link header-link" href="https://misharp-selleros-app.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="프로그램 문의하기">프로그램 문의하기</a>
+      <a class="overlay-link header-link" href="https://misharp-selleros-app.streamlit.app/" target="_blank" rel="noopener noreferrer" aria-label="셀러OS 바로가기">셀러OS 바로가기</a>
     </section>
 
     <main>
